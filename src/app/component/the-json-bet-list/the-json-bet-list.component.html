@@ -1,0 +1,30 @@
+<p>the-json-bet-list works!</p>
+<div>
+    <h2>Json Bet List from app/data folder using : import * as ...</h2>
+    <ul *ngFor="let bet of fakeJsonList3">
+        <li>
+            <h3>
+                Bet number {{bet.id}} : {{bet.bet}}
+                From : {{bet.gambler.name}}, id:{{bet.gambler.id}}
+            </h3>
+        </li>
+    </ul>
+    <h2>Json Bet List from app/data folder using standard import</h2>
+    <ul *ngFor="let bet of fakeBetList">
+        <li>
+            <h3>
+                Bet number {{bet.id}} : {{bet.bet}}
+                From : {{bet.gambler.name}}
+            </h3>
+        </li>
+    </ul>
+    <h2>Json Bet List from assets/data folder using standard import</h2>
+    <ul *ngFor="let bet of fakeBetList2">
+        <li>
+            <h3>
+                Bet number {{bet.id}} : {{bet.bet}}
+                From : {{bet.gambler.name}}
+            </h3>
+        </li>
+    </ul>
+</div>

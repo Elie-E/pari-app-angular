@@ -1,0 +1,10 @@
+<div class="bet-list">
+    <div *ngFor="let singleBet of fakeBets">
+        <div class="single-bet">
+            <app-the-bet-template [theBet] = "singleBet"></app-the-bet-template>
+        </div>
+    </div>
+    <app-the-bet-template [theBet] = "fakeBet"></app-the-bet-template>
+    <app-the-bet-template [theBet] = "fakeBet2"></app-the-bet-template>
+
+</div>

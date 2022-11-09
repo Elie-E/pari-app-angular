@@ -21,7 +21,13 @@
     "lib": [
       "es2020",
       "dom"
-    ]
+    ],
+    // Set this to be able to read json files :
+    "resolveJsonModule": true,
+    // Then add one of the followings to use standard import
+    // ( "esModuleInterop" also enable "allowSyntheticDefaultImports"):
+    "esModuleInterop": true,
+    // "allowSyntheticDefaultImports": true
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

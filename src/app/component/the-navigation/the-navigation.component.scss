@@ -1,0 +1,18 @@
+.navigation {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    // height: 6%;
+    height: 56px;
+    display: flex;
+    justify-content: space-around;
+    background-color: red;
+}
+.navigation-button {
+    margin: auto;
+    background-color: gray;
+    overflow: hidden;
+    width: 24px;
+    height: 24px;
+
+}
