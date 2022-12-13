@@ -4,7 +4,8 @@ export class FakeBet {
 
     constructor(
         public id: number,
-        public gambler: FakeGambler,
-        public gamblerBet: number
+        public bet: number,
+        public gambler: FakeGambler
+        
     ) {}
 }

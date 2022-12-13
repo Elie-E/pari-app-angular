@@ -1,19 +1,32 @@
 import { Component, OnInit } from '@angular/core';
 
+// #####
 // work with the tsconfig.json with the line 
 // "resolveJsonModule": true 
-// OR USING json-typing.d.ts file :
-// from the data folder in app folder :
+
+// OR USING json-typing.d.ts file
+
+// import from the data folder in app folder :
 import * as data from 'src/app/data/fake-bet-data.json';
 // or from the asset folder : 
 import * as dataBet from '../../../assets/data/fake-bet-data.json';
+ // #####
 
-// import from the data folder in app folder, work with 
-// ONLY with json-typing.d.ts file
+// #####
+// work with tsconfig.json with "resolveJsonModule": true 
+// AND "esModuleInterop": true (to enabled standard import)
+
+// OR USINg json-typing.d.ts file:
+
+// import from the data folder in app folder
 import jsonData from 'src/app/data/fake-bet-data.json';
-// import from the data folder in assets folder, work 
-// ONLY with the json-typing.d.ts file :
+// import from the data folder in assets folder
 import jsonFakeBet from '../../../assets/data/fake-bet-data.json';
+
+
+import { FakeBet } from 'src/app/modele/fake/fakeBet';
+import { FakeGambler } from 'src/app/modele/fake/fakeGambler';
+// #####
 
 @Component({
   selector: 'app-the-json-bet-list',
@@ -31,6 +44,9 @@ export class TheJsonBetListComponent implements OnInit {
   public fakeBetList?:{id: number, bet: number, gambler: {id:number, name:string}}[] = jsonData;
   public fakeBetList2?:{id: number, bet: number, gambler: {id:number, name:string}}[] = jsonFakeBet;
 
+  // Using the modele :
+  public fBL?: FakeBet[] = jsonData;
+
 
   constructor() { }
 
@@ -42,6 +58,8 @@ export class TheJsonBetListComponent implements OnInit {
 
     console.log(jsonData); // array
     console.log(jsonFakeBet); // array
+
+    console.log(this.fBL); // array
   }
 
 }

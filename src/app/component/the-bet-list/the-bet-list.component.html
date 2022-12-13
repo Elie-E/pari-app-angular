@@ -1,10 +1,34 @@
 <div class="bet-list">
+
+    <!-- Data from the array fakeBets in the .ts file, an array of class
+    FakeBet in fakeBets.ts and passing it to the child component 
+    the-bet-template -->
     <div *ngFor="let singleBet of fakeBets">
         <div class="single-bet">
             <app-the-bet-template [theBet] = "singleBet"></app-the-bet-template>
         </div>
     </div>
+
+    <!-- Injecting the child component with data from differents variables
+    in the .ts file, each one beeing a FakeBet class from fakeBet.ts file -->
     <app-the-bet-template [theBet] = "fakeBet"></app-the-bet-template>
     <app-the-bet-template [theBet] = "fakeBet2"></app-the-bet-template>
+    
+    <!-- Data from the constant FAKEBETS in the fake-bets.ts file 
+    in data folder, first using the object and returning its
+    data by using the property fakeBetItems : -->
+    <div *ngFor="let item of theFakeBets.fakeBetItems">
+        <div class="single-bet">
+            <app-the-bet-template [theBet] = "item"></app-the-bet-template>
+        </div>
+    </div>
+    
+    <!-- Second using the data already returned in  
+    the-bet-list.component.ts file -->
+    <div *ngFor="let item of theFakeBetsItems">
+        <div class="single-bet">
+            <app-the-bet-template [theBet] = "item"></app-the-bet-template>
+        </div>
+    </div>
 
 </div>
