@@ -6,13 +6,17 @@
     height: 56px;
     display: flex;
     justify-content: space-around;
-    background-color: red;
+    background-color: rgb(192, 190, 190);
 }
 .navigation-button {
     margin: auto;
-    background-color: gray;
+    background-color: rgb(172, 166, 166);
+    border-radius: 20%;
     overflow: hidden;
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">betme</string>
+    <string name="title_activity_main">betme</string>
+    <string name="package_name">zzz.lalilulelo.www</string>
+    <string name="custom_url_scheme">zzz.lalilulelo.www</string>
+</resources>
